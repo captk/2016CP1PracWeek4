@@ -28,6 +28,7 @@ int mainPowerFunction(int argc, char** argv) {
     return 0;
 }
 
+
 void power(int a, int b) {
     int i = 0, p = 1;
     while (i < b) {

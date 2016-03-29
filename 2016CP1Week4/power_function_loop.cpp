@@ -21,18 +21,10 @@ void power(int, int);
  * 
  */
 int main(int argc, char** argv) {
-    
-    for(int i; i <= 12; i++){
+
+    for(int i=1; i <= 12; i++){
         power(2, i);
     }
-    return 0;
-}
 
-void power(int a, int b) {
-    int i = 0, p = 1;
-    while (i < b) {
-        p = p * a;
-        i++;
-    }
-    cout << a << " to the power of " << b << " is = " << p << endl;
+    return 0;
 }
