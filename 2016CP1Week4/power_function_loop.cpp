@@ -20,7 +20,7 @@ void power(int, int);
 /*
  * 
  */
-int main(int argc, char** argv) {
+int mainPowerFunctionLoop(int argc, char** argv) {
 
     for(int i=1; i <= 12; i++){
         power(2, i);

@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/power_function.o \
 	${OBJECTDIR}/power_function_loop.o \
 	${OBJECTDIR}/powers.o \
+	${OBJECTDIR}/quadratic.o \
 	${OBJECTDIR}/three_powers.o
 
 
@@ -85,6 +86,11 @@ ${OBJECTDIR}/powers.o: powers.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/powers.o powers.cpp
+
+${OBJECTDIR}/quadratic.o: quadratic.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/quadratic.o quadratic.cpp
 
 ${OBJECTDIR}/three_powers.o: three_powers.cpp 
 	${MKDIR} -p ${OBJECTDIR}
