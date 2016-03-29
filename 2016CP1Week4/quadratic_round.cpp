@@ -20,7 +20,7 @@ using namespace std;
 /*
  * 
  */
-int main(int argc, char** argv) {
+int mainQuadraticRound(int argc, char** argv) {
     double a, b, c, x1 ,x2, delta;
     cout.setf(ios::fixed);
     cout.setf(ios::showpoint);

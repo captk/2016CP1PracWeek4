@@ -18,6 +18,7 @@
       <itemPath>powers.cpp</itemPath>
       <itemPath>quadratic.cpp</itemPath>
       <itemPath>quadratic_round.cpp</itemPath>
+      <itemPath>temperature.cpp</itemPath>
       <itemPath>three_powers.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -54,6 +55,8 @@
       </item>
       <item path="quadratic_round.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="temperature.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="three_powers.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -88,6 +91,8 @@
       <item path="quadratic.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="quadratic_round.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="temperature.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="three_powers.cpp" ex="false" tool="1" flavor2="0">
       </item>
