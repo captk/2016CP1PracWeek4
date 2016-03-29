@@ -16,7 +16,7 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int mainThreePowers() {
     int i = 0, p = 1;
     int a = 3, b = 4;
     while (i < b) {
