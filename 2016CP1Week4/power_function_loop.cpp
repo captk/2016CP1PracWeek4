@@ -5,10 +5,10 @@
  */
 
 /* 
- * File:   power_function.cpp
+ * File:   power_function_loop.cpp
  * Author: k
  *
- * Created on 29 March 2016, 3:50 PM
+ * Created on 29 March 2016, 5:36 PM
  */
 
 #include <cstdlib>
@@ -20,11 +20,11 @@ void power(int, int);
 /*
  * 
  */
-int mainPowerFunction(int argc, char** argv) {
+int main(int argc, char** argv) {
     
-    power(2, 4);
-    power(3, 3);
-    power(5, 4);
+    for(int i; i <= 12; i++){
+        power(2, i);
+    }
     return 0;
 }
 
