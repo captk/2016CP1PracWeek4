@@ -40,6 +40,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/power_function_loop.o \
 	${OBJECTDIR}/powers.o \
 	${OBJECTDIR}/quadratic.o \
+	${OBJECTDIR}/quadratic_round.o \
 	${OBJECTDIR}/three_powers.o
 
 
@@ -91,6 +92,11 @@ ${OBJECTDIR}/quadratic.o: quadratic.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/quadratic.o quadratic.cpp
+
+${OBJECTDIR}/quadratic_round.o: quadratic_round.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/quadratic_round.o quadratic_round.cpp
 
 ${OBJECTDIR}/three_powers.o: three_powers.cpp 
 	${MKDIR} -p ${OBJECTDIR}
