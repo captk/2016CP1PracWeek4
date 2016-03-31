@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/cylinder.o \
+	${OBJECTDIR}/cylinder_overload_menu.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/power_function.o \
 	${OBJECTDIR}/power_function_loop.o \
@@ -74,6 +75,11 @@ ${OBJECTDIR}/cylinder.o: cylinder.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cylinder.o cylinder.cpp
+
+${OBJECTDIR}/cylinder_overload_menu.o: cylinder_overload_menu.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cylinder_overload_menu.o cylinder_overload_menu.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -13,6 +13,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>cylinder.cpp</itemPath>
+      <itemPath>cylinder_overload_menu.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
       <itemPath>power_function.cpp</itemPath>
       <itemPath>power_function_loop.cpp</itemPath>
@@ -45,6 +46,8 @@
       <compileType>
       </compileType>
       <item path="cylinder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cylinder_overload_menu.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -84,6 +87,8 @@
         </asmTool>
       </compileType>
       <item path="cylinder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="cylinder_overload_menu.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
