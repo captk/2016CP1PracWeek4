@@ -15,7 +15,7 @@
 #include <iostream>
 using namespace std;
 
-int main(int argc, char** argv) {
+int mainTemperature(int argc, char** argv) {
     double t_in_fah, t_in_cel;
     cout << "Enter a temperature in Fahrenheit \n";
     cin >> t_in_fah;
