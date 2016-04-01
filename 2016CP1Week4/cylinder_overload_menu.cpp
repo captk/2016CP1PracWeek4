@@ -16,35 +16,64 @@
 #include <cstdlib>
 #include <iostream>
 #include <cmath>
+#include "common.h"
+
 using namespace std;
-double PI = 3.14159; // This variable is defined globally, known to all
 // functions in this program as PI
-double area(double); // Function declaration for function cross area
-double area(double, double); // Function declaration for function side area
+//double cross_area(double); // Function declaration for function cross area
+//double side_area(double, double); // Function declaration for function side area
+void doCylinder();
+void doSphere();
+double sphereArea(double);
+double volume (double, double);
+double volume (double);
+double cross_area(double); // Function declaration for function cross area
+double side_area(double, double); // Function declaration for function side area
 
 int main() {
+    int userIn;
+    cout << "Enter 1 for cylinder or 2 for sphere" << endl;
+    cin >> userIn;
+    
+    if(userIn == 1){
+        doCylinder();
+    }
+    else if (userIn == 2){
+        doSphere();
+    }
+    else 
+        cout << "Invalid choice error";
+    
+}
+
+void doCylinder(){
     double h, r; //variables local to the main function
     cout << "Enter the radius and the height of the cylinder in cm <Enter> ";
     cin >> r >> h;
     cout << endl;
-    cout << "Before I do any computation or call any function, I want to let you know that \n";
-    cout << "you have entered r = " << r << " and h = " << h << "." << endl;
-    cout << "I am planning to use inch, thus in the first function, I will convert r, and " << endl;
-    cout << "in the second one I will convert h \n";
-    cout << "The cross section area of the cylinder is " << cross_area(r) << " inch-sqr" << endl;
-    cout << "The side area of the cylinder is " << side_area(r, h) << " inch-sqr \n\n";
-    return 0;
+    cout << "The side area of the cylinder is " << side_area(r, h) << " cm-sqr" << endl;
+    cout << "The total are of the cylinder is " << side_area(r, h)+2*cross_area(r)
+            << " cm-sqr" << endl;
+    cout << "The volume of the cylinder is " << volume(r, h) << " cm-cubed" << endl;
 }
 
-double area(double r) {
-    //Cross section area includes the disks at the bottom and the top
-    r = r * 0.3937; // converting r to inch
-    return 2 * PI * pow(r, 2);
+void doSphere(){
+    double r; //variables local to the main function
+    cout << "Enter the radius of the sphere in cm <Enter> ";
+    cin >> r;
+    cout << endl;
+    cout << "The radius of the sphere is " << r << endl;
+    cout << "The surface area of the sphere is " << sphereArea(r) << " cm-sqr" << endl;
+    cout << "The volume of the sphere is " << volume(r) << " cm-cube" << endl;
+
 }
 
-double area(double r, double h) {
-    double area; //variable local to side area function
-    h = h * 0.3937; // converting h to inch
-    area = 2 * PI * r*h;
-    return area;
+double volume(double r, double h){
+    return 2*PI*r*h;
+}
+double sphereArea(double r){
+    return 4*PI*r*r;
+}
+double volume(double r){
+    return 4*PI*r*r*r/3;
 }

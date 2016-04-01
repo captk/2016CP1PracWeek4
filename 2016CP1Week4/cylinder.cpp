@@ -16,13 +16,14 @@
 #include <cstdlib>
 #include <iostream>
 #include <cmath>
+#include "common.h"
+
 using namespace std;
-double PI = 3.14159; // This variable is defined globally, known to all
 // functions in this program as PI
 double cross_area(double); // Function declaration for function cross area
 double side_area(double, double); // Function declaration for function side area
 
-int main() {
+int mainCylinder() {
     double h, r; //variables local to the main function
     cout << "Enter the radius and the height of the cylinder in cm <Enter> ";
     cin >> r >> h;
@@ -38,13 +39,13 @@ int main() {
 
 double cross_area(double r) {
     //Cross section area includes the disks at the bottom and the top
-    r = r * 0.3937; // converting r to inch
+    //r = r * 0.3937; // converting r to inch
     return 2 * PI * pow(r, 2);
 }
 
 double side_area(double r, double h) {
     double area; //variable local to side area function
-    h = h * 0.3937; // converting h to inch
+    //h = h * 0.3937; // converting h to inch
     area = 2 * PI * r*h;
     return area;
 }
